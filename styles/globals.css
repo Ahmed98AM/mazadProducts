@@ -1,3 +1,6 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,16 +21,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #F6F4F5;
+  font-family: 'Nunito', sans-serif; /* Applying Nunito font */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.trapezoid {
+	border-bottom: 0.4em solid #D20653;
+	border-left: 0.2em solid transparent;
+	border-right: 0.2em solid transparent;
+	height: 0;
+	width: 2em;
 }
