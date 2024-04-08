@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-white sticky w-full top-0 border-gray-200 py-2 px-0 md:px-10 z-10">
+    <nav className="bg-white sticky w-full top-0 border-gray-200 py-1 px-0 md:px-10 z-10">
       <div className="mx-4  grid grid-cols-2">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse text-[#828282]">
             <img src="/icons/menu.png" className="h-5 w-5 block md:hidden" alt="Mazaady Logo" />
@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
             <div className='gap-4 items-end text-[0.7em] hidden md:flex'>
                 <div className='relative'>
                     <p className=' text-[#D20653] h-full font-bold'>Home</p>
-                    <div className="trapezoid absolute left-1 top-7"></div>
+                    <div className="trapezoid absolute left-1 top-[2.35em]"></div>
                 </div>         
                 <div className='relative'>
                     <p className=' hover:text-[#D20653] h-full'>Blog</p>
