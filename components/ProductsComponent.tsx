@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import ProductComponent from './ProductComponent';
 
 const ProductsComponent: React.FC = () => {
-  const [isLike, setIsLike] = useState(false);
 
   return (
     <>
-      <div className="text-[2em] grid grid-cols-1 md:grid-cols-2 font-extrabold mb-5">
+      <div className="text-[2em] grid grid-cols-1 md:grid-cols-2 font-extrabold mb-5 ">
         <div className="grid grid-cols-3 gap-3 text-[0.7em]">
           <div className="bg-[#FFF5E9] flex items-center justify-center text-[#FF951D] border-[#FF951D] border-[0.1em] rounded-[0.5em] cursor-pointer h-10">
             <p>Products</p>
@@ -29,7 +28,7 @@ const ProductsComponent: React.FC = () => {
         <h1 >Products</h1>
         <span className="text-[grey] text-[0.5em]">(12)</span>
       </div>
-      <div className="grid grid-rows-6 gap-5">
+      <div className="grid grid-rows-6 gap-5 ">
         {[...Array(6)].map((_, index) => (
           <div key={index} className="row-span-1">
             <ProductComponent />
