@@ -85,7 +85,7 @@ export default function Task_1() {
                     <Form className='w-full flex flex-col gap-5 p-20'>
                         <div>
                             <label htmlFor="category">Main Category<span className='font-bold text-[red]'>*</span> </label>
-                            <Field id="category" className="w-full text-[0.7em]" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => { 
+                            <Field id="category" className="w-full text-[0.7em] h-[3em] rounded-md cursor-pointer my-1" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => { 
                                 const selectedIndex = e.target.selectedIndex;
                                 const selectedOptionKey = e.target.options[selectedIndex].getAttribute('data-id');
                                 setSelectedCategory(selectedOptionKey?parseInt(selectedOptionKey): undefined);
@@ -101,7 +101,7 @@ export default function Task_1() {
                         </div>
                         <div>
                             <label htmlFor="category">Sub Category<span className='font-bold text-[red]'>*</span> </label>
-                            <Field className="w-full text-[0.7em]" id="subCategory" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                            <Field className="w-full text-[0.7em] h-[3em] rounded-md cursor-pointer my-1" id="subCategory" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                                 const selectedIndex = e.target.selectedIndex;
                                 const selectedOptionKey = e.target.options[selectedIndex].getAttribute('data-id');
                                 setSelectedSubCategory(selectedOptionKey?parseInt(selectedOptionKey): undefined);
@@ -126,7 +126,7 @@ export default function Task_1() {
                             subCategoryOptionsData?.map((property, i) => (
                                 <div key={property.id}>
                                     <label htmlFor={property.name}>{property.name} </label>
-                                    <Field className="w-full text-[0.7em]" id={property.id.toString()} as="select" name={property.name} label={`Select ${property.name}`}  
+                                    <Field className="w-full text-[0.7em] h-[3em] rounded-md cursor-pointer my-1" id={property.id.toString()} as="select" name={property.name} label={`Select ${property.name}`}  
                                         onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                                             const selectedValue = e.target.value;
                                             setOtherInputs(prevState => ({
