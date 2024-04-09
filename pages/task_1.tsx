@@ -82,7 +82,7 @@ export default function Task_1() {
                 }}
             >
                 {({ isSubmitting, setFieldValue, values }) => (
-                    <Form className='w-full flex flex-col gap-5 p-20'>
+                    <Form className='w-full flex flex-col gap-5 p-7'>
                         <div>
                             <label htmlFor="category">Main Category<span className='font-bold text-[red]'>*</span> </label>
                             <Field id="category" className="w-full text-[0.7em] h-[3em] rounded-md cursor-pointer my-1" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => { 
