@@ -5,27 +5,16 @@ import QRComponent from "@/components/QRComponent";
 import ProductComponent from "@/components/ProductComponent";
 import ProductsComponent from "@/components/ProductsComponent";
 import Navbar from "@/components/NavbarComponent";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <div className="h-[100vh] relative ovf">
-      <Navbar></Navbar>
-      <div className="md:grid md:grid-cols-3 gap-5 m-[2em] text-black text-[0.5em] ">
-        
-        <div className="col-span-1 md:grid md:grid-rows-2 gap-6">
-          <div className="">
-            <ProfileComponent></ProfileComponent>
-          </div>
-          <div className="mt-5 md:mt-0 flex items-center">
-            <QRComponent></QRComponent>
-          </div>
-        </div>
-        <div className="bg-white col-span-2 p-5 rounded-[2em] mt-2 md:mt-0">
-          <ProductsComponent></ProductsComponent>
-        </div>
-      </div>
+    <div className="h-[100vh] relative grid grid-rows-2 text-white">
+      <button onClick={()=> router.push("/task_1")} className="bg-[#EFBC9B] font-[500] hover:opacity-90">Go to task 1</button>
+      <button onClick={()=> router.push("/task_2")} className="bg-[#9CAFAA] font-[500] hover:opacity-90">Go to task 2</button>
     </div>
   );
 }
