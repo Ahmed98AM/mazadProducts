@@ -6,7 +6,7 @@ const ProductComponent: React.FC = () => {
     <div className="grid grid-cols-4 gap-5">
         <div className="flex items-start justify-start col-span-4 gap-5 ">
             <div className="relative ">
-                <img className="object-fit aspect-[6/5] h-20" src="/images/products/prod-1.png"></img>
+                <img className="object-fit aspect-[6/4] h-20" src="/images/products/prod-1.png"></img>
                 <div onClick={()=> {setIsLike(!isLike)}}  className='md:hidden absolute top-1 w-5 h-5 left-1 bg-white  rounded-full flex items-center justify-center p-1'>
                     <img className="object-contain w-4 h-4 aspect-square cursor-pointer " src={isLike? "/icons/like.png": "/icons/like-empty.png"}></img>
                 </div>  
