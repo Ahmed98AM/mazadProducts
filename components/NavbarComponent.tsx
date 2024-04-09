@@ -1,11 +1,29 @@
 import React from 'react';
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-white sticky w-full top-0 border-gray-200 py-1 px-0 md:px-10 z-10">
+    <nav className="bg-white sticky w-full top-0 border-gray-200 py-2 md:py-2 px-0 md:px-10 z-10">
       <div className="mx-4  grid grid-cols-2">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse text-[#828282]">
-            <img src="/icons/menu.png" className="h-5 w-5 block md:hidden" alt="Mazaady Logo" />
+            <div className='block md:hidden'>
+                <Menu>
+                    <MenuHandler>
+                        <img src="/icons/menu.png" className="h-5 w-5 block" alt="Mazaady Logo" />
+                    </MenuHandler>
+                    <MenuList>
+                        <MenuItem>Home</MenuItem>
+                        <MenuItem>Blog</MenuItem>
+                        <MenuItem>Gifts</MenuItem>
+                    </MenuList>
+                </Menu>
+            </div>
             <img src="/images/logo.png" className="h-8 mx-4" alt="Mazaady Logo" />
             <div className='gap-4 items-end text-[0.7em] hidden md:flex'>
                 <div className='relative'>
