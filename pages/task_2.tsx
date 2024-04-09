@@ -10,10 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Task_2() {
   return (
-    <div className="h-[100vh] relative ovf">
+    <div className="h-[100vh] relative">
       <Navbar></Navbar>
-      <div className="md:grid md:grid-cols-3 gap-5 m-[2em] text-black text-[0.5em] ">
-        
+      <div className="md:grid md:grid-cols-3 gap-5 m-[2em] text-black text-[0.6em] ">
         <div className="col-span-1 md:grid md:grid-rows-2 gap-6">
           <div className="">
             <ProfileComponent></ProfileComponent>
